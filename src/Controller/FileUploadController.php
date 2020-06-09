@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Dto\FileUpload\FileUploadRequestDto;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\FileUploadServiceInterface;
@@ -42,6 +43,10 @@ class FileUploadController extends AbstractController
      */
     public function upload(Request $request)
     {
-        return $this->json(['ok']);
+        // Create file upload request dto
+        $fileUploadRequestDto = FileUploadRequestDto::createFromRequest($request);
+
+        // Returns json
+        return $this->json($fileUploadRequestDto->getFile());
     }
 }
