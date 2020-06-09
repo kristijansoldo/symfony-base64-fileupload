@@ -3,12 +3,17 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\FileUploadServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
+ * Class FileUploadController
+ *
  * @Route("/file", name="file")
+ * @package App\Controller
  */
 class FileUploadController extends AbstractController
 {
@@ -19,6 +24,7 @@ class FileUploadController extends AbstractController
 
     /**
      * FileUploadController constructor.
+     *
      * @param FileUploadServiceInterface $fileUploadService
      */
     public function __construct(FileUploadServiceInterface $fileUploadService)
@@ -27,9 +33,14 @@ class FileUploadController extends AbstractController
     }
 
     /**
+     * Base64 file upload.
+     *
      * @Route("/upload", name="upload", methods={"POST"})
+     *
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function upload()
+    public function upload(Request $request)
     {
         return $this->json(['ok']);
     }
