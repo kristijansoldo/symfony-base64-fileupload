@@ -13,7 +13,7 @@ class FileUploadResponseDto
     /**
      * @var string
      */
-    private $filePath;
+    public $filePath;
 
     /**
      * @return string
