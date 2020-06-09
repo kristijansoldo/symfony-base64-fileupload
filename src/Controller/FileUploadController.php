@@ -47,7 +47,10 @@ class FileUploadController extends AbstractController
         // Create file upload request dto
         $fileUploadRequestDto = $fileUploadRequestDtoFactory->create();
 
+        // Upload file and generate response dto
+        $fileUploadResponseDto = $this->fileUploadService->upload($fileUploadRequestDto);
+
         // Returns json
-        return $this->json($fileUploadRequestDto);
+        return $this->json($fileUploadResponseDto);
     }
 }

@@ -4,6 +4,10 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    public_path: '%kernel.project_dir%/public'
+    files_path: '/images'
+    domain: '%env(resolve:DOMAIN)%'
+    supported_upload_extensions: ['.gif','.png','.jpg','.jpeg']
 
 services:
     # default configuration for services in *this* file
@@ -25,3 +29,4 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
