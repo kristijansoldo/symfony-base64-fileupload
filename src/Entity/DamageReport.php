@@ -24,42 +24,42 @@ class DamageReport
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Vorname")
+     * @ORM\Column(type="string", length=250, name="Vorname")
      */
     private $firstName;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Nachname")
+     * @ORM\Column(type="string", length=250, name="Nachname")
      */
     private $surName;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Anschrift")
+     * @ORM\Column(type="string", length=250, name="Anschrift")
      */
     private $adress;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Telefonnummer")
+     * @ORM\Column(type="string", length=250, name="Telefonnummer")
      */
     private $telephone;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Email")
+     * @ORM\Column(type="string", length=250, name="Email")
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255, name="KFZ_Versicherung")
+     * @ORM\Column(type="string", length=250, name="KFZ_Versicherung")
      */
     private $kfzInsurance;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Partner_ID")
+     * @ORM\Column(type="string", length=250, name="Partner_ID")
      */
     private $partnerId;
 
     /**
-     * @ORM\Column(type="string", length=255, name="Bild_Location")
+     * @ORM\Column(type="string", length=250, name="Bild_Location")
      */
     private $photoPath;
 
